@@ -1,0 +1,15 @@
+D:\projetoBank\moisanBank1\moisanBank1\obj\Debug\net7.0\moisanBank1.csproj.AssemblyReference.cache
+D:\projetoBank\moisanBank1\moisanBank1\obj\Debug\net7.0\moisanBank1.GeneratedMSBuildEditorConfig.editorconfig
+D:\projetoBank\moisanBank1\moisanBank1\obj\Debug\net7.0\moisanBank1.AssemblyInfoInputs.cache
+D:\projetoBank\moisanBank1\moisanBank1\obj\Debug\net7.0\moisanBank1.AssemblyInfo.cs
+D:\projetoBank\moisanBank1\moisanBank1\obj\Debug\net7.0\moisanBank1.csproj.CoreCompileInputs.cache
+D:\projetoBank\moisanBank1\moisanBank1\bin\Debug\net7.0\moisanBank1.exe
+D:\projetoBank\moisanBank1\moisanBank1\bin\Debug\net7.0\moisanBank1.deps.json
+D:\projetoBank\moisanBank1\moisanBank1\bin\Debug\net7.0\moisanBank1.runtimeconfig.json
+D:\projetoBank\moisanBank1\moisanBank1\bin\Debug\net7.0\moisanBank1.dll
+D:\projetoBank\moisanBank1\moisanBank1\bin\Debug\net7.0\moisanBank1.pdb
+D:\projetoBank\moisanBank1\moisanBank1\obj\Debug\net7.0\moisanBank1.dll
+D:\projetoBank\moisanBank1\moisanBank1\obj\Debug\net7.0\refint\moisanBank1.dll
+D:\projetoBank\moisanBank1\moisanBank1\obj\Debug\net7.0\moisanBank1.pdb
+D:\projetoBank\moisanBank1\moisanBank1\obj\Debug\net7.0\moisanBank1.genruntimeconfig.cache
+D:\projetoBank\moisanBank1\moisanBank1\obj\Debug\net7.0\ref\moisanBank1.dll
