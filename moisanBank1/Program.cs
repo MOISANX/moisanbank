@@ -1,26 +1,25 @@
-﻿namespace moisanBank1
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace moisanBank1
 {
-
-
-    public class Executavel
+    internal class Program
     {
+       
 
-        public static void Main(string[] args)
+
+        static void Main(string[] args)
         {
-            Console.Title = "BANK Versão MOISANX";
+            Console.Title = "Banco Versão MOISANX";
             Console.BackgroundColor = ConsoleColor.White;
             Console.ForegroundColor = ConsoleColor.Black;
             Console.Clear();
-            new Menu().Menu1();
 
-
-
+            new Bank().Menu();
 
         }
-
     }
-
-
-    }
-
-
+}
