@@ -15,7 +15,9 @@ namespace moisanBank1
         List<string> cpfs = new List<string>();
         List<string> titulares = new List<string>();
         List<string> senhas = new List<string>();
-        List<double> saldos = new List<double>();
+        List<double> saldos = new List<double>(10000);
+        string cpfValidar;
+        double depositar=0.0;
         //areas dos menus
         public void Menu() 
         {
@@ -30,13 +32,14 @@ namespace moisanBank1
 
                 Menu2();
             }
-            else 
+            if(escolha == 2)
             {
 
                 RegistrarNovoUsuario(cpfs,titulares,senhas,saldos);
                 Menu();
             
             }
+            else  { Environment.Exit(0); }
 
 
         
@@ -47,7 +50,7 @@ namespace moisanBank1
             Console.Clear();
             Console.WriteLine("LOGIN PARA ACESSAR SUA CONTA:");
             Console.Write("CPF: ");
-            string cpfValidar = Console.ReadLine();
+             cpfValidar = Console.ReadLine();
             Console.Write("SENHA: ");
             String senhaValidar = Console.ReadLine();
 
@@ -113,8 +116,45 @@ namespace moisanBank1
 
         private void Transferir()
         {
-            throw new NotImplementedException();
+            Console.Clear();
+            Console.WriteLine("Para quem voce deseja transfeir coloque o cpf dele(a)");
+            string cpfRecipient = Console.ReadLine();
+            Console.WriteLine("Quanto voce deseja transferir:");
+            double transferAmount = double.Parse(Console.ReadLine());
+
+            // Find the recipient's account
+            int recipientIndex = cpfs.FindIndex(cpf => cpf == cpfRecipient);
+            if (recipientIndex == -1)
+            {
+                // Recipient's account not found
+                Console.WriteLine("Conta do destinatario não encontrada");
+                Console.ReadKey();
+                Menu3();
+                return;
+            }
+
+            // Validate that the sender has sufficient funds
+            int senderIndex = cpfs.FindIndex(cpf => cpf == cpfValidar);
+            if (saldos[senderIndex] > transferAmount)
+            {
+                Console.WriteLine("Você não tem saldo suficiente para realizar esta transferência");
+                Console.ReadKey();
+                Menu3();
+                return;
+            }
+
+            // Transfer funds
+            saldos[senderIndex] -= transferAmount;
+            saldos[recipientIndex] += transferAmount;
+
+            // Display success message
+            Console.WriteLine("Transferência realizada com sucesso");
+            Console.ReadKey();
+            Menu3();
         }
+
+
+    
 
         public void Sacar()
         {
@@ -135,7 +175,8 @@ namespace moisanBank1
         public void Depositar() {
             Console.Clear();
             Console.Write("Quanto voce deseja depositar: ");
-            saldos.Add(double.Parse(Console.ReadLine()));
+            depositar = double.Parse(Console.ReadLine());
+            saldos.Add(depositar);
             foreach (double saldo in saldos) {
                 Console.WriteLine($"voce depositou na conta{saldo}");
 
